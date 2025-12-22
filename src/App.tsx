@@ -10,6 +10,7 @@ import Settings from './pages/Home/Settings'
 import Upgrade from './pages/Home/Upgrade'
 import ProtectedRoute from './components/ProtectedRoute'
 import ProvisionedRoute from './components/ProvisionedRoute'
+import AccVest from './pages/Home/Accvest'
 
 function App() {
 	const { isAuthenticated, isLoading } = useAuth0()
@@ -70,6 +71,7 @@ function App() {
 				<Route index element={<Overview />} />
 				<Route path="overview" element={<Overview />} />
 				<Route path="alpaca-connect" element={<AlpacaConnect />} />
+				<Route path="accvest" element={<AccVest />} />
 				<Route path="configure" element={<Configure />} />
 				<Route path="settings" element={<Settings />} />
 				<Route path="upgrade" element={<Upgrade />} />

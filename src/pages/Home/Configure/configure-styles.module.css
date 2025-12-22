@@ -2,14 +2,125 @@
 	padding: var(--spacing-lg);
 }
 
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--spacing-xl);
+}
+
 .title {
 	font-size: var(--font-size-2xl);
 	font-weight: 600;
 	color: var(--color-text-primary);
-	margin-bottom: var(--spacing-md);
 }
 
-.description {
-	font-size: var(--font-size-base);
-	color: var(--color-text-secondary);
+.addBtn {
+	padding: var(--spacing-sm) var(--spacing-lg);
+	font-size: var(--font-size-sm);
+	font-weight: 500;
+	color: #ffffff;
+	background-color: var(--color-accent);
+	border: none;
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.addBtn:hover {
+	background-color: var(--color-accent-hover);
+}
+
+.tableWrapper {
+	overflow-x: auto;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: var(--color-bg-primary);
+}
+
+.table thead {
+	background-color: var(--color-bg-secondary);
+}
+
+.table th {
+	padding: var(--spacing-md);
+	text-align: left;
+	font-size: var(--font-size-sm);
+	font-weight: 600;
+	color: var(--color-text-primary);
+	border-bottom: 2px solid var(--color-border);
+}
+
+.table td {
+	padding: var(--spacing-sm);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.input {
+	width: 100%;
+	padding: var(--spacing-sm);
+	font-size: var(--font-size-sm);
+	color: var(--color-text-primary);
+	background-color: var(--color-bg-primary);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+	transition: var(--transition);
+}
+
+.input:focus {
+	outline: none;
+	border-color: var(--color-accent);
+}
+
+.selectTrigger {
+	width: 100%;
+	font-size: var(--font-size-sm);
+}
+
+.actions {
+	display: flex;
+	gap: var(--spacing-sm);
+	align-items: center;
+}
+
+.saveBtn {
+	padding: var(--spacing-xs) var(--spacing-md);
+	font-size: var(--font-size-xs);
+	font-weight: 500;
+	color: #ffffff;
+	background-color: var(--color-success);
+	border: none;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	transition: var(--transition);
+	white-space: nowrap;
+}
+
+.saveBtn:hover {
+	opacity: 0.9;
+}
+
+.deleteBtn {
+	padding: var(--spacing-xs);
+	color: var(--color-error);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: var(--transition);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.deleteBtn:hover {
+	opacity: 0.7;
 }

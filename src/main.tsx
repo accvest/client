@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Auth0Provider } from '@auth0/auth0-react'
 import { BrowserRouter } from 'react-router-dom'
+import { Toaster } from 'sonner'
 import './index.css'
 import App from './App'
 
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')!).render(
 		>
 			<BrowserRouter>
 				<App />
+				<Toaster position="top-right" />
 			</BrowserRouter>
 		</Auth0Provider>
 	</StrictMode>,
