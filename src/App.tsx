@@ -2,12 +2,14 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import Login from './pages/Login'
 import DashboardLayout from './components/DashboardLayout'
+import Unprovisioned from './pages/Unprovisioned'
 import Overview from './pages/Home/Overview'
 import AlpacaConnect from './pages/Home/AlpacaConnect'
 import Configure from './pages/Home/Configure'
 import Settings from './pages/Home/Settings'
 import Upgrade from './pages/Home/Upgrade'
 import ProtectedRoute from './components/ProtectedRoute'
+import ProvisionedRoute from './components/ProvisionedRoute'
 
 function App() {
 	const { isAuthenticated, isLoading } = useAuth0()
@@ -48,10 +50,20 @@ function App() {
 				}
 			/>
 			<Route
+				path="/unprovisioned"
+				element={
+					<ProtectedRoute>
+						<Unprovisioned />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
 				path="/home"
 				element={
 					<ProtectedRoute>
-						<DashboardLayout />
+						<ProvisionedRoute>
+							<DashboardLayout />
+						</ProvisionedRoute>
 					</ProtectedRoute>
 				}
 			>

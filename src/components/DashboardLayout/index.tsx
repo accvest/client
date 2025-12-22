@@ -10,7 +10,7 @@ const navItems = [
 	{ label: 'Home / Overview', path: '/home/overview' },
 	{ label: 'Alpaca Connect', path: '/home/alpaca-connect' },
 	{ label: 'Configure', path: '/home/configure' },
-	{ label: 'AccuVest', path: '/home/accvest' },
+	{ label: 'AccVest', path: '/home/accvest' },
 	{ label: 'Settings', path: '/home/settings' },
 	{ label: 'Upgrade +', path: '/home/upgrade' },
 ]
@@ -77,7 +77,7 @@ function DashboardLayout() {
 						</SheetContent>
 					</Sheet>
 
-					<h1 className={styles.welcomeText}>WELCOME &lt;{user?.email?.split('@')[0]?.toUpperCase() || 'USER'}&gt;</h1>
+					<h1 className={styles.welcomeText}>Welcome {user?.email?.split('@')[0]?.toLocaleUpperCase() || 'USER'}</h1>
 					
 					<button className={styles.logoutBtn} onClick={handleLogout}>
 						Logout
